@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard prototype for Trulytics">
+    <meta name="author" content="Cecilia Murphy">
+    <title>Dashboard | Trulytics</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Trulytics</h1>
+        <p>True insights. Better decisions.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="methods.html">Methods</a></li>
+        </ul>
+    </nav>
+
+<main>
+    <section id="dashboard-intro">
+        <h2>Prototype Dashboard</h2>
+        <p>
+            This prototype demonstrates how Trulytics could organize social media analytics
+            in a clearer and more useful way. The dashboard focuses on growth, engagement,
+            post performance, and audience behavior.
+        </p>
+    </section>
+
+    <section id="dashboard-overview">
+        <h2>Overview</h2>
+
+        <div class="feature-cards">
+            <div class="feature-card">
+                <h3 id="followers">0</h3>
+                <p>Total Followers</p>
+            </div>
+
+            <div class="feature-card">
+                <h3 id="following">0</h3>
+                <p>Following</p>
+            </div>
+
+            <div class="feature-card">
+                <h3 id="posts">0</h3>
+                <p>Total Posts</p>
+            </div>
+
+            <div class="feature-card">
+                <h3 id="engagement-rate">0%</h3>
+                <p>Engagement Rate</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="growth-chart-section">
+        <h2>Follower Growth</h2>
+        <p>[Prototype Chart: Follower Growth Over Time]</p>
+        <canvas id="followersChart"></canvas>
+    </section>
+
+    <section id="engagement-chart-section">
+        <h2>Engagement Trends</h2>
+        <p>[Prototype Chart: Likes and Comments Over Time]</p>
+        <canvas id="engagementChart"></canvas>
+    </section>
+
+    <section id="performance-chart-section">
+        <h2>Top Performing Posts</h2>
+        <p>[Prototype Chart: Top Post Performance]</p>
+        <canvas id="postsChart"></canvas>
+    </section>
+
+    <section id="audience-insights">
+        <h2>Audience Insights</h2>
+
+        <div class="feature-cards">
+            <div class="feature-card">
+                <h3 id="active-day">N/A</h3>
+                <p>Most Active Day</p>
+            </div>
+
+            <div class="feature-card">
+                <h3 id="active-time">N/A</h3>
+                <p>Most Active Time</p>
+            </div>
+
+            <div class="feature-card">
+                <h3 id="top-category">N/A</h3>
+                <p>Top Content Category</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="relationship-insights">
+        <h2>Relationship Insights</h2>
+
+        <div class="feature-cards">
+            <div class="feature-card">
+                <h3 id="new-followers">0</h3>
+                <p>New Followers</p>
+            </div>
+
+            <div class="feature-card">
+                <h3 id="lost-followers">0</h3>
+                <p>Lost Followers</p>
+            </div>
+
+            <div class="feature-card">
+                <h3 id="mutual-followers">0</h3>
+                <p>Mutual Followers</p>
+            </div>
+
+            <div class="feature-card">
+                <h3 id="not-following-back">0</h3>
+                <p>Not Following Back</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="recent-posts">
+        <h2>Recent Post Performance</h2>
+
+        <div class="feature-cards">
+            <div class="feature-card">
+                <h3 id="post-1-title">Post 1</h3>
+                <p id="post-1-likes">Likes: 0</p>
+                <p id="post-1-comments">Comments: 0</p>
+                <p id="post-1-engagement">Engagement: 0%</p>
+            </div>
+
+            <div class="feature-card">
+                <h3 id="post-2-title">Post 2</h3>
+                <p id="post-2-likes">Likes: 0</p>
+                <p id="post-2-comments">Comments: 0</p>
+                <p id="post-2-engagement">Engagement: 0%</p>
+            </div>
+
+            <div class="feature-card">
+                <h3 id="post-3-title">Post 3</h3>
+                <p id="post-3-likes">Likes: 0</p>
+                <p id="post-3-comments">Comments: 0</p>
+                <p id="post-3-engagement">Engagement: 0%</p>
+            </div>
+
+            <div class="feature-card">
+                <h3 id="post-4-title">Post 4</h3>
+                <p id="post-4-likes">Likes: 0</p>
+                <p id="post-4-comments">Comments: 0</p>
+                <p id="post-4-engagement">Engagement: 0%</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
