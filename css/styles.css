@@ -79,7 +79,7 @@ header p {
 
 
 /* =====================
-   NAV (FULL WIDTH + EVEN SPACING)
+   NAV (FULL WIDTH + HAMBURGER MENU)
 ===================== */
 
 nav {
@@ -90,21 +90,74 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1;
+    min-height: 2.5rem;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.35rem;
+}
+
+.hamburger span {
+    width: 24px;
+    height: 2.5px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6.5px, 6.5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5.5px, -5.5px);
 }
 
 nav ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: transparent;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-direction: row;
+    gap: 0;
+    max-width: 0;
+    overflow: hidden;
+    transition: max-width 0.3s ease;
+    border: none;
+    padding: 0;
     list-style: none;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    white-space: nowrap;
+    align-self: center;
 }
 
 nav li {
-    flex: 1;
+    flex: 0 0 auto;
     text-align: center;
+    padding: 0.5rem 1.5rem;
+    border-right: 1px solid var(--bg-alt);
+}
+
+nav li:last-child {
+    border-right: none;
 }
 
 nav a {
@@ -116,8 +169,34 @@ nav a {
     transition: 0.25s ease;
 }
 
+nav ul.active {
+    max-width: 1000px;
+    padding: 0 1rem;
+}
+
 nav a:hover {
     color: var(--ig-purple);
+}
+
+.nav-dashboard {
+    margin-left: auto;
+    margin-top: -1.3rem;
+}
+
+.nav-dashboard a {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 999px;
+    background: var(--gradient-main);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.nav-dashboard a:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
 }
 
 
@@ -219,6 +298,21 @@ section p {
 
 
 /* =====================
+   REFERENCES / WORKS CITED
+===================== */
+
+#references-list {
+    text-align: left;
+}
+
+#references-list p {
+    margin-left: 2rem;
+    text-indent: -2rem;
+    max-width: 100%;
+}
+
+
+/* =====================
    RESPONSIVE
 ===================== */
 
@@ -236,9 +330,52 @@ section p {
         font-size: 2.2rem;
     }
 
+    nav {
+        flex-wrap: nowrap;
+    }
+
     nav ul {
-        flex-wrap: wrap;
-        gap: 0.5rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        max-width: 100%;
+        max-height: 0;
+        transition: max-height 0.3s ease;
+        border-bottom: 1px solid var(--border);
+    }
+
+    nav li {
+        width: 100%;
+        text-align: left;
+        padding: 0.5rem 2rem;
+        border-right: none;
+        border-bottom: 1px solid var(--bg-alt);
+    }
+
+    nav li:last-child {
+        border-bottom: none;
+    }
+
+    nav ul.active {
+        max-height: 500px;
+        max-width: 100%;
+        padding: 1rem 0;
+    }
+
+    .nav-dashboard {
+        margin-left: 0;
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .nav-dashboard a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 
     section {
