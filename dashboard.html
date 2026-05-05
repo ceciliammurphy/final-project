@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trulytics Dashboard</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Trulytics Dashboard</h1>
+        <p>Prototype Analytics Overview</p>
+    </header>
+
+    <main>
+
+    <section>
+        <p> This dashboard combines real Instagram data with manually collected interaction metrics to demonstrate how Trulytics organizes and interprets social media performance. </p>
+    </section>
+
+    <!-- OVERVIEW CARDS -->
+    <section class="feature-cards">
+
+    <div class="feature-card">
+        <h3>Total Followers</h3>
+        <p id="followers">—</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>Total Following</h3>
+        <p id="following">—</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>Follower/Following Ratio</h3>
+        <p id="ratio">—</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>Avg. Interactions</h3>
+        <p id="engagement">—</p>
+    </div>
+
+</section>
+
+    <!-- FOLLOWER GROWTH -->
+    <section>
+        <h2>Follower Growth</h2>
+        <canvas id="followerGrowthChart"></canvas>
+    </section>
+
+    <section>
+        <h2>Following Growth</h2>
+        <canvas id="followingGrowthChart"></canvas>
+    </section>
+
+    <section>
+    <h2>Posting Activity</h2>
+        <p>
+            This chart shows how often content is posted over time. Posting frequency can influence visibility and audience growth.
+        </p>
+        <canvas id="postChart"></canvas>
+    </section>
+
+    <!-- ENGAGEMENT -->
+    <section>
+        <h2>Post Engagement (Interactions)</h2>
+        <p> This chart shows engagement based on total post interactions, including likes, comments, and sends. It highlights how audience interaction varies across content and provides a more complete view of performance than likes alone. </p>
+        <canvas id="engagementChart"></canvas>
+    </section>
+
+    <!-- CONTENT PATTERNS -->
+    <section>
+        <h2>Content Pattern Breakdown</h2>
+        <p> This chart shows the distribution of content types across the dataset, including carousel posts, single images, and video content. These patterns help demonstrate how posting style contributes to visibility and engagement strategies. </p>
+        <canvas id="contentChart"></canvas>
+    </section>
+
+    <section>
+    <h2>Trulytics Insights</h2>
+
+    <p id="growthInsight"></p>
+    <p id="audienceInsight"></p>
+    <p id="engagementInsight"></p>
+
+    </section>
+
+    </main>
+
+</body>
+</html>
